@@ -1,0 +1,12 @@
+#!/bin/bash
+FILE='w_00049891.res'
+dir=3
+
+gfortran -O3 -mcmodel=large restart_nc_4D.f90 -o test_nc.exe -I/usr/include -lnetcdff
+
+./test_nc.exe $FILE $DIR
+
+
+######## IF COMPRESSION = YES #######################
+nccopy -d9 -s $FILE.nc $FILE_compressed.nc 
+rm $FILE.nc

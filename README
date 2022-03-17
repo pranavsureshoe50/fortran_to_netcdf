@@ -1,0 +1,3 @@
+## check gfortran and netcdf installation
+change file name of fortran bindary in netcdf_execute
+vorticity terms : computes vorticity from velocity 
